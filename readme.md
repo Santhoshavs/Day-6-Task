@@ -1,0 +1,1 @@
+This code contains all the questions in day 6 task.check the about url for results. 
