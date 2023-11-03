@@ -15,24 +15,19 @@ console.log(person1.gender);
 console.log(person1.email);
 
 //class to calculate the uber price!
-
-class UberPrice {
-    constructor() {
-      this.baseFare = 100;
-      this.perMinuteRate = 4;
-      this.perMileRate = 15;
-    }
-      calculatePrice(distanceMiles, durationMinutes) {
-      const price = this.baseFare + (this.perMinuteRate * durationMinutes) + (this.perMileRate * distanceMiles);
-      return price;
-    }
-  }
-  const calculator = new UberPrice();
-  const distanceMiles = 5;
-  const durationMinutes = 15;
-  const price = calculator.calculatePrice(distanceMiles, durationMinutes);
-  console.log(`Estimated Uber Price: ${price.toFixed(2)}`);
-
+class UberPrice{
+     constructor(kilometer,price=50){
+          this.kilometer = kilometer;
+          this.price = price;
+     }
+     get Price(){
+          return this.kilometer*this.price;
+     }
+}
+var uber1 = new UberPrice(5);
+var uber2 = new UberPrice(5,125);
+console.log(uber1.Price);
+console.log(uber2.Price);
 //Class - Movie!
   
 class Movie {
